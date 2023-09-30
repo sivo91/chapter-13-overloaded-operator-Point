@@ -14,11 +14,18 @@ public:
 
     //  Point& = line 45 p1 and p2 new obj
     Point operator + (const Point& other) const {
+        // x + druhy obj.x,  y + drujy obj.y   === 15 + 15 a 20 + 20
         return Point(x + other.x, y + other.y);
     }
 
 
     bool operator == (const Point& other) const { 
+        // This is the overloaded + operator. This allows us
+        // to add two Point objects together. The function takes
+        // in another Point object as a reference and returns a 
+        // new Point whose x and y values are the sum of
+        // the x and y values of the current object and the passed
+        // object, respectively.
         return (x == other.x) && (y == other.y);
     }
 
@@ -59,13 +66,15 @@ int main() {
     
     try
     {
-
+        // operator == give me true
         if (p1 == p2) {
             cout << "p1 and p2 are the same point." << endl;
         }
         else {
             cout << "p1 and p2 are different points." << endl;
         }
+
+       
     }
     catch (string)
     {
@@ -78,13 +87,24 @@ int main() {
 
 /*
 
-Enter 2 values for first Point class: 15 20
+Enter 2 values for first Point class: 4 5
 
-Enter 2 values for Second Point class: 15 20
+Enter 2 values for Second Point class: 5 6
 
-p1: (15, 20)
-p2: (15, 20)
-p1 + p2: (30, 40)
+
+p1.x !== p2.x === false
+
+p1: (4, 5)
+p2: (5, 6)
+p1 + p2: (9, 11)
+p1 and p2 are different points.
+
+*************
+p1.x == p2.x  === true
+
+p1: (2, 2)
+p2: (2, 2)
+p1 + p2: (4, 4)
 p1 and p2 are the same point.
 
 */
