@@ -53,14 +53,18 @@ int main() {
     Point p1(x, y);  
     Point p2(a, b);
 
+    // sum = 3rd obj 
     Point sum = p1 + p2;
 
+    // print obj1 values x and y
     cout << "p1: ";
     p1.display();
 
+    // print obj2 values x and y
     cout << "p2: ";
     p2.display();
 
+    // print obj3 sum values x and y
     cout << "p1 + p2: ";
     sum.display();
     
